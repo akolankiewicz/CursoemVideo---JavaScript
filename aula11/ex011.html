@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dequegentetué</title>
+</head>
+<body>
+    <h1>De que gente tu é?</h1>
+    <input type="text" id="pais">
+    <input type="submit" value="verificar" onclick="verificar()">
+    <p id="res"></p>
+
+    <script>
+        function verificar(){
+        var pais = window.document.getElementById('pais').value
+        var res = window.document.getElementById('res')
+        res.innerHTML = `<p>Você nasceu em ${pais}</p>`
+        if (pais == "Brasil"){
+            res.innerHTML += 'Portanto, você é brasileiro'
+        }
+        else{
+            res.innerHTML += 'Portanto, você é estrangeiro'
+        }
+    }
+    </script>
+</body>
+</html>
